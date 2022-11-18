@@ -8,10 +8,10 @@ Parameters:
   Image:
     Type: String
     Default: nginx
-  AppName:
-    Description: {{ description }}
-    Type: String
-    Default: {{ appName }}
+#   AppName:
+#     Description: {{ description }}
+#     Type: String
+#     Default: {{ appName }}
   ServiceName:
     Type: String
     Default:  {{ ecs.myService }}
@@ -191,7 +191,7 @@ Resources:
   
   ## Task Definition
   TaskDefinition:
-    AppName: !Ref AppName
+#     AppName: !Ref AppName
     Type: AWS::ECS::TaskDefinition
     
     DependsOn: LogGroup
